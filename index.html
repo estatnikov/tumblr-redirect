@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; url=myapp://oauth-callback/tumblr">
+  <script>
+    window.onload = function() {
+      var query = window.location.search;
+      window.location = "myapp://oauth-callback/tumblr" + query;
+    }
+  </script>
 </head>
 <body>
-  <p>Redirecting to app...</p>
+  Redirecting...
 </body>
 </html>
